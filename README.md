@@ -1,1 +1,1 @@
-# AndroidLab2
+# This is COMP 304 Lab 2 Assignment
