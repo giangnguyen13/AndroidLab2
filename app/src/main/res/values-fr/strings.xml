@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="welcome_text">Bienvenue sur mon application</string>
+    <string name="enter_btn">entrer</string>
 </resources>
