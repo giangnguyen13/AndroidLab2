@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GiangLab2</string>
+    <string name="welcome_text">Chào mừng đến với ứng dụng của tôi</string>
+</resources>
