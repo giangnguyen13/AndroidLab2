@@ -7,7 +7,7 @@
     tools:context=".GiangActivity">
 
     <Button
-        android:id="@+id/enterButton"
+        android:id="@+id/giangEnterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -15,10 +15,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/giangLogoImageView3" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/giangLogoImageView3"
         android:layout_width="163dp"
         android:layout_height="191dp"
         android:layout_marginTop="208dp"
