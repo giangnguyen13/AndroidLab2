@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class NguyenApartmentActivity extends AppCompatActivity {
@@ -16,6 +18,16 @@ public class NguyenApartmentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apartment_house);
+
+        Button checkoutBtn = (Button)findViewById(R.id.giangCheckoutBtn);
+        checkoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), NguyenCheckoutActivity.class);
+                startIntent.putExtra("welcomeText","This text is from intent object");
+                startActivity(startIntent);
+            }
+        });
     }
 
     @Override

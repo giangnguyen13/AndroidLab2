@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NguyenCondoHouseActivity"></activity>
+        <activity android:name=".NguyenCheckoutActivity"></activity>
+        <activity android:name=".NguyenPaymentActivity" />
+        <activity android:name=".NguyenCondoHouseActivity" />
         <activity android:name=".NguyenTownHouseActivity" />
         <activity android:name=".NguyenDetachedActivity" />
         <activity android:name=".NguyenSemiDetachedActivity" />

@@ -6,4 +6,9 @@
     <string name="semi_detached_home">Maison jumelée</string>
     <string name="condo">Appartement en copropriété</string>
     <string name="town_house">Maison de ville</string>
+    <string name="hint_fullname">Entrez votre nom complet</string>
+    <string name="hint_card_number">Entrez votre numéro de carte de débit / crédit</string>
+    <string name="hint_billing_address">Entrez votre adresse de facturation</string>
+    <string name="hint_postal_code">Entrez votre code postal</string>
+    <string name="hint_phone">Entrez votre numéro de téléphone</string>
 </resources>

@@ -7,4 +7,9 @@
     <string name="semi_detached_home">Nhà liền kề</string>
     <string name="condo">Chung cư</string>
     <string name="town_house">Nhà đất</string>
+    <string name="hint_fullname">Nhập tên đầy đủ</string>
+    <string name="hint_card_number">Nhập thông tin thẻ debit/credit</string>
+    <string name="hint_billing_address">Nhập địa chỉ</string>
+    <string name="hint_postal_code">Nhập postal code</string>
+    <string name="hint_phone">Nhập số điện thoại</string>
 </resources>
