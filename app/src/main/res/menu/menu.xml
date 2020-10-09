@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/apartment"
+        android:icon="@drawable/ic_icon_house"
+        android:title="@string/apartment"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/detached_home"
+        android:title="@string/detached_home"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/condo"
+        android:title="@string/condo"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/semi_detached"
+        android:title="@string/semi_detached_home"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/town_house"
+        android:title="@string/town_house"
+        app:showAsAction="never"
+        />
+</menu>
