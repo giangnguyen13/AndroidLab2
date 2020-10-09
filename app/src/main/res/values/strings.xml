@@ -2,4 +2,16 @@
     <string name="app_name" translatable="false">GiangLab2</string>
     <string name="logo_description" translatable="false">LeaseOrRentHome Inc.</string>
     <string name="enter_btn">Enter</string>
+    <string name="apartment">Apartment</string>
+    <string name="detached_home">Detached home</string>
+    <string name="semi_detached_home">Semi-detached home</string>
+    <string name="condo">Condominium apartment</string>
+    <string name="town_house">Town house</string>
+    <string-array name="house_type">
+        <item>Apartment</item>
+        <item>Detached home</item>
+        <item>Semi-detached home</item>
+        <item>Condominium apartment</item>
+        <item>Town house</item>
+    </string-array>
 </resources>

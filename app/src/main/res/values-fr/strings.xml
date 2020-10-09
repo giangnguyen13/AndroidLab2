@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="enter_btn">entrer</string>
+    <string name="enter_btn">Entrer</string>
+    <string name="apartment">Appartement</string>
+    <string name="detached_home">Maison individuelle</string>
+    <string name="semi_detached_home">Maison jumelée</string>
+    <string name="condo">Appartement en copropriété</string>
+    <string name="town_house">Maison de ville</string>
 </resources>

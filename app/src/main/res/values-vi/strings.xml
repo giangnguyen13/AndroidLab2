@@ -2,4 +2,9 @@
 <resources>
     <string name="app_name">GiangLab2</string>
     <string name="enter_btn">Bắt đầu</string>
+    <string name="apartment">Chung cư nhỏ</string>
+    <string name="detached_home">Nhà biệt lập</string>
+    <string name="semi_detached_home">Nhà liền kề</string>
+    <string name="condo">Chung cư</string>
+    <string name="town_house">Nhà đất</string>
 </resources>
