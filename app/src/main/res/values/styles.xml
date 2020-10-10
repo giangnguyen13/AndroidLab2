@@ -7,4 +7,32 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="mandatory_text_field_style">
+        <item name="android:textColor">
+            @color/mand_text_color
+
+        </item>
+        <item name="android:textSize">
+            @dimen/important_text
+        </item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="informative_field">
+        <item name="android:textColor">
+            @color/info
+
+        </item>
+        <item name="android:textSize">
+            @dimen/unimportant_text
+        </item>
+    </style>
+
+    <style name="submit_btn">
+        <item name="android:textColor">
+            @color/background_color
+        </item>
+        <item name="android:background">@color/success</item>>
+    </style>
+
 </resources>

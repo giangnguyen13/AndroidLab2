@@ -19,4 +19,6 @@
     <string name="hint_billing_address">Enter your billing address</string>
     <string name="hint_postal_code">Enter your postal code</string>
     <string name="hint_phone">Enter your phone number</string>
+    <string name="prompt_select_type">Choose the type of house you want to buy</string>
+    <string name="submit">Next</string>
 </resources>

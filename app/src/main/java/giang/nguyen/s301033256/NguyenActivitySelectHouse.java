@@ -10,14 +10,52 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class NguyenActivitySelectHouse extends AppCompatActivity {
 
+    private Intent startIntent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_house);
+        final Spinner spin = (Spinner)findViewById(R.id.giangHouseTypeDropdownSpinner);
+        Button submitBtn = (Button)findViewById(R.id.giangSubmitViewHouseBtn);
+        submitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //get the spinner view as text view
+                TextView text_sel = (TextView)spin.getSelectedView();
+                String selectedType = text_sel.getText().toString();
+                Toast.makeText(NguyenActivitySelectHouse.this, "\n Province = "+text_sel.getText(), Toast.LENGTH_SHORT).show();
+                switch (selectedType){
+                    case "Apartment":
+                        startIntent = new Intent(getApplicationContext(), NguyenApartmentActivity.class);
+                        startActivity(startIntent);
+                        break;
+                    case "Detached home":
+                        startIntent = new Intent(getApplicationContext(), NguyenDetachedActivity.class);
+                        startActivity(startIntent);
+                        break;
+                    case "Semi-detached home":
+                        startIntent = new Intent(getApplicationContext(), NguyenSemiDetachedActivity.class);
+                        startActivity(startIntent);
+                        break;
+                    case "Condominium apartment":
+                        startIntent = new Intent(getApplicationContext(), NguyenCondoHouseActivity.class);
+                        startActivity(startIntent);
+                        break;
+                    case "Town house":
+                        startIntent = new Intent(getApplicationContext(), NguyenTownHouseActivity.class);
+                        startActivity(startIntent);
+                        break;
+                }
+            }
+        });
     }
 
     @Override
@@ -29,7 +67,6 @@ public class NguyenActivitySelectHouse extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        Intent startIntent;
         switch (item.getItemId()){
             case R.id.apartment:
                 Toast.makeText(this,"Select Apartment House type", Toast.LENGTH_SHORT).show();

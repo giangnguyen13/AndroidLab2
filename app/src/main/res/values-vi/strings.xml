@@ -12,4 +12,6 @@
     <string name="hint_billing_address">Nhập địa chỉ</string>
     <string name="hint_postal_code">Nhập postal code</string>
     <string name="hint_phone">Nhập số điện thoại</string>
+    <string name="submit">Tiếp tục</string>
+    <string name="prompt_select_type">Chọn loại căn hộ bạn muốn mua</string>
 </resources>

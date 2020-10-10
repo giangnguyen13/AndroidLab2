@@ -11,4 +11,6 @@
     <string name="hint_billing_address">Entrez votre adresse de facturation</string>
     <string name="hint_postal_code">Entrez votre code postal</string>
     <string name="hint_phone">Entrez votre numéro de téléphone</string>
+    <string name="submit">Suivant</string>
+    <string name="prompt_select_type">Choisissez le type de maison que vous souhaitez acheter</string>
 </resources>
