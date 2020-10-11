@@ -18,17 +18,22 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.LinkedList;
+import java.io.Serializable;
+import java.util.ArrayList;
 
 import giang.nguyen.s301033256.model.House;
 
 public class NguyenCondoHouseActivity extends AppCompatActivity {
     //private ImageView.ScaleType scaleType = new ImageView.ScaleType()
-    private LinkedList<House> selectedHouses = new LinkedList<House>();
+    private ArrayList<House> selectedHouses = new ArrayList<House>();
+    public static final String HOUSE_KEY = "house";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_giang_condo_house);
+        final Bundle bundle = new Bundle();
+
+
         LinearLayout linearLayout = findViewById(R.id.giangCondoLinearLayout);
         for (final House house : this.getCondoHouses())
         {
@@ -43,7 +48,7 @@ public class NguyenCondoHouseActivity extends AppCompatActivity {
             ImageView image = new ImageView(this);
             image.setMaxHeight(50);
             //image.setMaxWidth(50);
-            image.setImageDrawable(house.getImg());
+            image.setImageDrawable(this.getImg(house.getImgSource()));
             final CheckBox virtualVisit = new CheckBox(this);
             final CheckBox physicalVisit = new CheckBox(this);
             virtualVisit.setText("Visit Virtually");
@@ -61,14 +66,14 @@ public class NguyenCondoHouseActivity extends AppCompatActivity {
                     }
                 }
 
-                public LinkedList<House> addHouse(LinkedList<House> list, House house){
+                public ArrayList<House> addHouse(ArrayList<House> list, House house){
                     if (!list.contains(house)){
                         list.add(house);
                     }
                     return list;
                 }
 
-                public LinkedList<House> removeHouse(LinkedList<House> list, House house){
+                public ArrayList<House> removeHouse(ArrayList<House> list, House house){
                     if (list.contains(house)){
                         list.remove(house);
                     }
@@ -91,14 +96,14 @@ public class NguyenCondoHouseActivity extends AppCompatActivity {
                     }
                 }
 
-                public LinkedList<House> addHouse(LinkedList<House> list, House house){
+                public ArrayList<House> addHouse(ArrayList<House> list, House house){
                     if (!list.contains(house)){
                         list.add(house);
                     }
                     return list;
                 }
 
-                public LinkedList<House> removeHouse(LinkedList<House> list, House house){
+                public ArrayList<House> removeHouse(ArrayList<House> list, House house){
                     if (list.contains(house)){
                         list.remove(house);
                     }
@@ -113,17 +118,26 @@ public class NguyenCondoHouseActivity extends AppCompatActivity {
             linearLayout.addView(physicalVisit);
         }
 
-        Button testBtn = (Button)findViewById(R.id.test);
-        testBtn.setOnClickListener(new View.OnClickListener() {
+        Button paymentBtn = new Button(this);
+        paymentBtn.setText(R.string.submit);
+        linearLayout.addView(paymentBtn);
+        paymentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(NguyenCondoHouseActivity.this, "Selected: "+ selectedHouses.size(), Toast.LENGTH_SHORT).show();
-                for (final House house : selectedHouses){
-                    Toast.makeText(NguyenCondoHouseActivity.this, "Selected: "+ house.getAddress(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(NguyenCondoHouseActivity.this, NguyenCheckoutActivity.class);
+                intent.putExtra(HOUSE_KEY, selectedHouses.get(0));
+
+                ArrayList<String> ar=new ArrayList<String>();
+                for (House house : selectedHouses){
+                    String houseString = house.getHouseType() + "--" + house.getAddress() + "--" +
+                            house.getPrice() + "--" + house.getImgSource();
+                    ar.add(houseString);
                 }
+                intent.putStringArrayListExtra("list", ar);
+                startActivity(intent);
+
             }
         });
-
     }
 
     @Override
@@ -167,38 +181,26 @@ public class NguyenCondoHouseActivity extends AppCompatActivity {
         }
     }
 
-    public LinkedList<House> getCondoHouses(){
-        LinkedList<House> list = new LinkedList<House>();
+    public ArrayList<House> getCondoHouses(){
+        ArrayList<House> list = new ArrayList<House>();
 
-        Drawable drawableObj = getResources().getDrawable(R.drawable.house3);
-        Drawable drawableObj2 = getResources().getDrawable(R.drawable.house1);
-        Drawable drawableObj3 = getResources().getDrawable(R.drawable.house2);
-        House house1 = new House(550000, "48 Spring Forest Sq", drawableObj,"Condominium apartment");
+        House house1 = new House(550000, "48 Spring Forest Sq", "house1","Condominium apartment");
         list.add(house1);
-        House house2 = new House(600000, "60 Glenstroke Drive", drawableObj2,"Condominium apartment");
+        House house2 = new House(600000, "60 Glenstroke Drive", "house2","Condominium apartment");
         list.add(house2);
-        House house3 = new House(300000, "2 Queen Street", drawableObj3,"Condominium apartment");
+        House house3 = new House(300000, "2 Queen Street", "house3","Condominium apartment");
         list.add(house3);
-        House house4 = new House(700000, "123 Dundas East Street", drawableObj3,"Condominium apartment");
+        House house4 = new House(700000, "123 Dundas East Street", "house3","Condominium apartment");
         list.add(house4);
-        House house5 = new House(750000, "77 College East Street", drawableObj2,"Condominium apartment");
+        House house5 = new House(750000, "77 College East Street", "house2","Condominium apartment");
         list.add(house5);
-        House house6 = new House(800000, "4500 Sheppard Ave East", drawableObj,"Condominium apartment");
+        House house6 = new House(800000, "4500 Sheppard Ave East", "house1","Condominium apartment");
         list.add(house6);
         return list;
     }
 
-    /*public LinkedList<House> addHouse(LinkedList<House> list, House house){
-        if (!list.contains(house)){
-            list.add(house);
-        }
-        return list;
+    public Drawable getImg(String imgSource){
+        Drawable drawableObj = getDrawable(getResources().getIdentifier(imgSource, "drawable", getPackageName()));
+        return drawableObj;
     }
-
-    public LinkedList<House> removeHouse(LinkedList<House> list, House house){
-        if (list.contains(house)){
-            list.remove(house);
-        }
-        return list;
-    }*/
 }

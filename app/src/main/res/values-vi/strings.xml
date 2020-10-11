@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">GiangLab2</string>
     <string name="enter_btn">Bắt đầu</string>
     <string name="apartment">Chung cư nhỏ</string>
     <string name="detached_home">Nhà biệt lập</string>
@@ -14,4 +13,5 @@
     <string name="hint_phone">Nhập số điện thoại</string>
     <string name="submit">Tiếp tục</string>
     <string name="prompt_select_type">Chọn loại căn hộ bạn muốn mua</string>
+    <string name="payment">Thanh toán</string>
 </resources>
