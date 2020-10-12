@@ -22,4 +22,5 @@
     <string name="prompt_select_type">Choose the type of house you want to buy</string>
     <string name="submit">Next</string>
     <string name="payment">Checkout</string>
+    <string name="processing">Processing payment...</string>
 </resources>

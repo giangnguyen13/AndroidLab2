@@ -14,4 +14,5 @@
     <string name="submit">Tiếp tục</string>
     <string name="prompt_select_type">Chọn loại căn hộ bạn muốn mua</string>
     <string name="payment">Thanh toán</string>
+    <string name="processing">Xử lý thanh toán...</string>
 </resources>
