@@ -24,15 +24,13 @@ import java.util.ArrayList;
 import giang.nguyen.s301033256.model.House;
 
 public class NguyenCondoHouseActivity extends AppCompatActivity {
-    //private ImageView.ScaleType scaleType = new ImageView.ScaleType()
+
     private ArrayList<House> selectedHouses = new ArrayList<House>();
-    public static final String HOUSE_KEY = "house";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_giang_condo_house);
-        final Bundle bundle = new Bundle();
-
 
         LinearLayout linearLayout = findViewById(R.id.giangCondoLinearLayout);
         for (final House house : this.getCondoHouses())
@@ -125,7 +123,6 @@ public class NguyenCondoHouseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(NguyenCondoHouseActivity.this, NguyenCheckoutActivity.class);
-                intent.putExtra(HOUSE_KEY, selectedHouses.get(0));
 
                 ArrayList<String> ar=new ArrayList<String>();
                 for (House house : selectedHouses){
