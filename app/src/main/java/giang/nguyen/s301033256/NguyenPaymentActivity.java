@@ -102,18 +102,21 @@ public class NguyenPaymentActivity extends AppCompatActivity {
                     }).start();
                 }else{
                     if(this.validateNameField(firstName.getText().toString()) == false){
-                        firstName.setError("Invalid input.!");
+                        firstName.setError("Required input.!");
                     }
                     if(this.validatePhoneField(phone.getText().toString()) == false){
-                        phone.setError( Integer.toString((phone.getText().toString()).length()) );
+                        phone.setError("Invalid input.!");
                     }
                     if(this.validateCardField(card.getText().toString()) == false){
-                        card.setError( Integer.toString((card.getText().toString()).length()) );
+                        card.setError("Invalid input.!");
                     }
                 }
 
             }
             private boolean validateNameField(String name){
+                if (name.length() == 0){
+                    return false;
+                }
                 return true;
             }
             private boolean validatePhoneField(String name){

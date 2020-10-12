@@ -179,17 +179,17 @@ public class NguyenTownHouseActivity extends AppCompatActivity {
     public ArrayList<House> getCondoHouses(){
         ArrayList<House> list = new ArrayList<House>();
 
-        House house1 = new House(400000, "48 Spring Forest Sq", "house1","Town home");
+        House house1 = new House(400000, "48 Spring Forest Sq", "house10","Town home");
         list.add(house1);
-        House house2 = new House(400000, "60 Glenstroke Drive", "house2","Town home");
+        House house2 = new House(500000, "60 Glenstroke Drive", "house11","Town home");
         list.add(house2);
-        House house3 = new House(400000, "2 Queen Street", "house3","Town home");
+        House house3 = new House(600000, "2 Queen Street", "house7","Town home");
         list.add(house3);
-        House house4 = new House(400000, "123 Dundas East Street", "house3","Town home");
+        House house4 = new House(700000, "123 Dundas East Street", "house3","Town home");
         list.add(house4);
-        House house5 = new House(400000, "77 College East Street", "house2","Town home");
+        House house5 = new House(800000, "77 College East Street", "house5","Town home");
         list.add(house5);
-        House house6 = new House(400000, "4500 Sheppard Ave East", "house1","Town home");
+        House house6 = new House(900000, "4500 Sheppard Ave East", "house1","Town home");
         list.add(house6);
         return list;
     }

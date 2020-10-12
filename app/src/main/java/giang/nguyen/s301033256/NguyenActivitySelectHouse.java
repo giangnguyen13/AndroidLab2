@@ -31,7 +31,6 @@ public class NguyenActivitySelectHouse extends AppCompatActivity {
                 //get the spinner view as text view
                 TextView text_sel = (TextView)spin.getSelectedView();
                 String selectedType = text_sel.getText().toString();
-                Toast.makeText(NguyenActivitySelectHouse.this, "\n Province = "+text_sel.getText(), Toast.LENGTH_SHORT).show();
                 switch (selectedType){
                     case "Apartment":
                         startIntent = new Intent(getApplicationContext(), NguyenApartmentActivity.class);

@@ -187,11 +187,11 @@ public class NguyenCondoHouseActivity extends AppCompatActivity {
         list.add(house2);
         House house3 = new House(300000, "2 Queen Street", "house3","Condominium apartment");
         list.add(house3);
-        House house4 = new House(700000, "123 Dundas East Street", "house3","Condominium apartment");
+        House house4 = new House(700000, "123 Dundas East Street", "house4","Condominium apartment");
         list.add(house4);
-        House house5 = new House(750000, "77 College East Street", "house2","Condominium apartment");
+        House house5 = new House(750000, "77 College East Street", "house5","Condominium apartment");
         list.add(house5);
-        House house6 = new House(800000, "4500 Sheppard Ave East", "house1","Condominium apartment");
+        House house6 = new House(800000, "4500 Sheppard Ave East", "house6","Condominium apartment");
         list.add(house6);
         return list;
     }

@@ -204,9 +204,9 @@ public class NguyenApartmentActivity extends AppCompatActivity {
         list.add(house2);
         House house3 = new House(300000, "2 Queen Street", "house3","Apartment");
         list.add(house3);
-        House house4 = new House(400000, "123 Dundas East Street", "house3","Apartment");
+        House house4 = new House(400000, "123 Dundas East Street", "house7","Apartment");
         list.add(house4);
-        House house5 = new House(500000, "77 College East Street", "house2","Apartment");
+        House house5 = new House(500000, "77 College East Street", "house10","Apartment");
         list.add(house5);
         return list;
     }

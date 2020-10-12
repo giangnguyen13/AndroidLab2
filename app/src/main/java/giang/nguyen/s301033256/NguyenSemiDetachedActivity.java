@@ -179,17 +179,17 @@ public class NguyenSemiDetachedActivity extends AppCompatActivity {
     public ArrayList<House> getCondoHouses(){
         ArrayList<House> list = new ArrayList<House>();
 
-        House house1 = new House(400000, "48 Spring Forest Sq", "house1","Detached home");
+        House house1 = new House(100000, "48 Spring Forest Sq", "house4","Detached home");
         list.add(house1);
-        House house2 = new House(600000, "60 Glenstroke Drive", "house2","Detached home");
+        House house2 = new House(300000, "60 Glenstroke Drive", "house5","Detached home");
         list.add(house2);
-        House house3 = new House(300000, "2 Queen Street", "house3","Detached home");
+        House house3 = new House(500000, "2 Queen Street", "house6","Detached home");
         list.add(house3);
-        House house4 = new House(700000, "123 Dundas East Street", "house3","Detached home");
+        House house4 = new House(700000, "123 Dundas East Street", "house7","Detached home");
         list.add(house4);
-        House house5 = new House(900000, "77 College East Street", "house2","Detached home");
+        House house5 = new House(900000, "77 College East Street", "house8","Detached home");
         list.add(house5);
-        House house6 = new House(100000, "4500 Sheppard Ave East", "house1","Detached home");
+        House house6 = new House(1000000, "4500 Sheppard Ave East", "house9","Detached home");
         list.add(house6);
         return list;
     }
