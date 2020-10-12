@@ -15,4 +15,5 @@
     <string name="prompt_select_type">Choisissez le type de maison que vous souhaitez acheter</string>
     <string name="payment">Check-out</string>
     <string name="processing">Traitement du paiement...</string>
+    <string name="selection_error">Veuillez sélectionner au moins 1 maison souhaitée.!</string>
 </resources>

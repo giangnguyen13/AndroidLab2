@@ -23,4 +23,5 @@
     <string name="submit">Next</string>
     <string name="payment">Checkout</string>
     <string name="processing">Processing payment...</string>
+    <string name="selection_error">Please select at least 1 house you want.!</string>
 </resources>

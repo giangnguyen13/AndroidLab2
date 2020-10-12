@@ -3,6 +3,8 @@ package giang.nguyen.s301033256;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -24,6 +26,7 @@ import giang.nguyen.s301033256.model.House;
 public class NguyenApartmentActivity extends AppCompatActivity {
 
     private ArrayList<House> selectedHouses = new ArrayList<House>();
+    AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,6 +119,7 @@ public class NguyenApartmentActivity extends AppCompatActivity {
         Button paymentBtn = new Button(this);
         paymentBtn.setText(R.string.submit);
         linearLayout.addView(paymentBtn);
+        builder = new AlertDialog.Builder(this);
         paymentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -127,9 +131,25 @@ public class NguyenApartmentActivity extends AppCompatActivity {
                             house.getPrice() + "--" + house.getImgSource();
                     ar.add(houseString);
                 }
-                intent.putStringArrayListExtra("list", ar);
-                startActivity(intent);
-
+                if (ar.size() == 0){
+                    //Setting message manually and performing action on button click
+                    builder.setMessage(R.string.selection_error)
+                            .setCancelable(false)
+                            .setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+                    //Creating dialog box
+                    AlertDialog alert = builder.create();
+                    //Setting the title manually
+                    alert.setTitle("Error");
+                    alert.show();
+                }else{
+                    intent.putStringArrayListExtra("list", ar);
+                    startActivity(intent);
+                }
             }
         });
     }
