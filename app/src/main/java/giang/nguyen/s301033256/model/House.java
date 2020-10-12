@@ -4,7 +4,13 @@ import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-//import java.io.Serializable;
+/**
+ * Lab 2 - Assignment
+ * Student Name: Giang Nguyen
+ * Student# 301033256
+ * Professor: Haki Sharifi
+ * COMP 304 - 002
+ * */
 
 public class House implements Parcelable {
 

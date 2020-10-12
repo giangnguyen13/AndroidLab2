@@ -1,3 +1,11 @@
+<!--/**-->
+<!--    * Lab 2 - Assignment-->
+<!--    * Student Name: Giang Nguyen-->
+<!--    * Student# 301033256-->
+<!--    * Professor: Haki Sharifi-->
+<!--    * COMP 304 - 002-->
+<!--    * */-->
+
 <resources>
     <string name="app_name" translatable="false">GiangLab2</string>
     <string name="logo_description" translatable="false">LeaseOrRentHome Inc.</string>

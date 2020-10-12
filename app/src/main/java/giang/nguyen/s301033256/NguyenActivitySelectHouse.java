@@ -16,6 +16,14 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * Lab 2 - Assignment
+ * Student Name: Giang Nguyen
+ * Student# 301033256
+ * Professor: Haki Sharifi
+ * COMP 304 - 002
+ * */
+
 public class NguyenActivitySelectHouse extends AppCompatActivity {
 
     private Intent startIntent;

@@ -12,6 +12,14 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * Lab 2 - Assignment
+ * Student Name: Giang Nguyen
+ * Student# 301033256
+ * Professor: Haki Sharifi
+ * COMP 304 - 002
+ * */
+
 public class NguyenPaymentActivity extends AppCompatActivity {
     static int progress;
     ProgressBar progressBar;

@@ -23,6 +23,14 @@ import java.util.ArrayList;
 
 import giang.nguyen.s301033256.model.House;
 
+/**
+ * Lab 2 - Assignment
+ * Student Name: Giang Nguyen
+ * Student# 301033256
+ * Professor: Haki Sharifi
+ * COMP 304 - 002
+ * */
+
 public class NguyenApartmentActivity extends AppCompatActivity {
 
     private ArrayList<House> selectedHouses = new ArrayList<House>();
